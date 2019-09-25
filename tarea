@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+//1
+//Encontrar la suma de todos los multiplos de 3 y 5 menores a 1000000.
+int main()
+{
+    int cont=0;
+    int conta=0;
+    for(int i=1;i<1000000;i++){
+            if(i%5==0){
+                cont+=i;
+            }
+    }
+    for (int j=1;j<1000000;j++){
+            if (j%3==0){
+                conta+=j;
+            }
+    }
+        cout<<cont + conta<<endl;
+    return 0;
+}
+
+//2 
+//Implemente una funcion que encuentre el factorial de un numero, tanto de la forma iterativa como de la forma recursiva.
+
+int factorial(int n)
+{
+    if (n<=1){
+        return 1;
+    }
+    else
+        return n*factorial(n-1);
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    cout << factorial(n);
+    return 0;
+}
+
+int main()
+{
+    int n;
+    cout <<"numero: ";cin >> n;
+    int fact=1;
+    for (int i=1;i<=n;i++){
+        fact*=i;
+    }
+    cout << fact << endl;
+    return 0;
+}
+
+//3 
+// Implemente un programa que solicite un n ́umero n e imprima todos los n números perfectos menores a n
+int main()
+{
+  int cont=0;
+  int num;
+  cout << "numero: ";cin >> num;
+  for (int i=1;i < num;i++){
+    if(i%2==0){
+        for(int e=(i/2);e>=1;e--)
+            if(i%e==0)
+            cont+=e;
+    }
+    if (cont==i)
+        cout << cont << "es perfecto y menor que " << num << endl;
+        cont=0;
+  }
+    return 0;
+}
