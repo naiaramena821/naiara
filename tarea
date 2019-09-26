@@ -72,3 +72,20 @@ int main()
   }
     return 0;
 }
+
+//4 mayor factor primo de 600851475143
+int main()
+{
+    long long numero=600851475143;
+    int aux;
+    for(int i = 2 ; i < numero ; i++){
+    if(numero % i == 0)
+    {
+        aux = i;
+
+        while(numero % i == 0)
+            numero /= i;
+    }
+}
+cout << aux << endl;
+}
